@@ -46,7 +46,7 @@ Integration as a systemd service
 
 - Make sure all dependencies (listed below) are installed (done automatically when installing via pip)
 - The ``raspi-mc`` command should be installed somewhere in your ``PATH`` (done automatically when installing via pip), make sure `raspi-mc.service` has corect path in `ExecStart` set to `raspi-mc` executable.
-- Systemd scripts are available: https://github.com/ricco386/RPi.MC/tree/master/RPi.MC/init.d to install them you will need root privileges, so we execute them as sudo::
+- Systemd scripts are available: https://github.com/ricco386/RPi.MC/tree/master/init.d to install them you will need root privileges, so we execute them as sudo::
 
     sudo cp init.d/raspi-mc.conf /etc/tmpfiles.d/
     sudo cp init.d/raspi-mc.service /etc/systemd/system/
@@ -63,7 +63,7 @@ Systemd scripts should be run under **default Raspberry Pi user** (pi), scripts 
 Usage
 -----
 
-You have to create a `.sensor.cfg` file and place into `/home/pi/.sensor.cfg` you can find example file in RPi.Sensor repo: https://github.com/ricco386/RPi.Sensor/blob/master/sensor.cfg.example and override default values in `[Magnetic_Contact]` section.
+You have to create a `.sensor.cfg` file and place into `/home/pi/.sensor.cfg` you can find example file in RPi.Sensor repo: https://github.com/ricco386/RPi.Sensor/blob/master/raspi_sensor/sensor.cfg.example and create section `[Magnetic_Contact]` where you can override default values.
 
 `raspi-mc` also support multiple parameters to overwrite config parameters. For more info run::
 
