@@ -17,6 +17,7 @@ config.
 Sensor is based on `RPi.Sensor <https://github.com/ricco386/RPi.Sensor/>`_ library, which make base for implementing
 different types of sensors in Python.
 
+
 Pre-Installation requirements
 -----------------------------
 
@@ -60,6 +61,7 @@ Systemd scripts should be run under **default Raspberry Pi user** (pi), scripts 
 
 - `RPi.Sensor <https://pypi.python.org/pypi/RPi.Sensor>`_ (0.5.3+)
 
+
 Usage
 -----
 
@@ -69,10 +71,12 @@ You have to create a `.sensor.cfg` file and place into `/home/pi/.sensor.cfg` yo
 
     raspi-mc --help
 
+
 Zabbix support
 --------------
 
 In directory `zabbix_template` there is a Zabbix template that can be imported to Zabbix and monitor systemd process if it is running and how much memorry it consumes. It also supports Zabbix trapper `rpi.mc-state` that can receive a sensor state changes.
+
 
 License
 -------
